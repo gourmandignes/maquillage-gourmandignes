@@ -8,10 +8,15 @@
         {% endif %}
         {% if  page.produits %}
         <li>Produits : 
-            {% for produit in page.produits %}
-            {{ produit }}
+            <ul>
+                {% for produit in page.produits %}
+            <li><a href="/produits/{{ produit }}">{{ produit }}</a></li>
             {% endfor %}
-            </li>
+            </ul>
+        </li>
+        {% endif %}
+        {% if  page.prix %}
+        <li>Prix : {{ page.prix }}</li>
         {% endif %}
         {% if page.adresse %}
             <li>Adresse : 

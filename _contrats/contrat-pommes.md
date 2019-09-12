@@ -8,7 +8,8 @@ site: https://cagette.gourmandignes.org
 coordinateur: pascal
 produits:
   - cagette-pommes-2kg
-  - pommes-5kg
+  - cagette-pommes-5kg
+  - poires
 tags:
   - Pommes
 ---
