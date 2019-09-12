@@ -1,44 +1,17 @@
 <div class=metas>
     <ul>
-        {% if  page.type %}
-            <li>
-                {% for type in page.type %}
-                    {% if type == "pub" or type == "bar" %}
-                    <i class="fa fa-glass-cheers" title="{{ type }}"></i>
-                    {% elsif type == "boutique" %}
-                    <i class="fas fa-store" title="{{ type }}"></i>
-                    {% elsif type == "galerie" %}
-                    <i class="far fa-image" title="{{ type }}"></i>
-                    {% elsif type == "supermarché" %}
-                    <i class="fas fa-shopping-bag" title="{{ type }}"></i>
-                    {% elsif type == "association" %}
-                    <i class="far fa-address-book" title="{{ type }}"></i>
-                    {% elsif type == "café" %}
-                    <i class="fas fa-mug-hot" title="{{ type }}"></i>
-                    {% elsif type == "restaurant" %}
-                    <i class="fas fa-utensils" title="{{ type }}"></i>
-                    {% elsif type == "jeux" %}
-                    <i class="fas fa-dice" title="{{ type }}"></i>
-                    {% elsif type == "végan" or type == "végétarien" %}
-                    <i class="fas fa-seedling" title="{{ type }}"></i>
-                    {% elsif type == "librairie" %}
-                    <i class="fas fa-book" title="{{ type }}"></i>
-                    {% elsif type == "vélo" %}
-                    <i class="fas fa-bycicle" title="{{ type }}"></i>
-                    {% elsif type == "épicerie" %}
-                    <i class="fas fa-shopping-basket" title="{{ type }}"></i>
-                    {% elsif type == "coworking" %}
-                    <i class="fas fa-laptop" title="{{ type }}"></i>
-                    {% elsif type == "atelier" or type == "bricolage" %}
-                    <i class="fas fa-tools" title="{{ type }}"></i>
-                    {% else %}
-                    {{ type }}
-                    {% endif %}
-                {% endfor %}
-            </li>
+        {% if  page.coordinateur %}
+            <li>Coordinateur : <a href="/coordinateurs/{{ page.coordinateur }}">{{ page.coordinateur }}</a></li> 
         {% endif %}
-        {% if  page.par %}
-            <li>Par : <a href="https://github.com/{{ page.par }}">{{ page.par }}</a></li> 
+        {% if  page.producteur %}
+        <li>Producteur : <a href="/producteurs/{{ page.producteur }}">{{ page.producteur }}</a></li>
+        {% endif %}
+        {% if  page.produits %}
+        <li>Produits : 
+            {% for produit in page.produits %}
+            {{ produit }}
+            {% endfor %}
+            </li>
         {% endif %}
         {% if page.adresse %}
             <li>Adresse : 

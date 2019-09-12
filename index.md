@@ -1,16 +1,10 @@
 ---
 layout: page
+title: Accueil du site 
 ---
 
-{% include danslajungle.html %}
+# Bienvenue
 
-## Consulter les lieux prévenants
-
+Par exemple des producteurs :
 {% include location-nav.html %}
-
-## Présentation
-
-- pour qui ?
-- pour quoi ?
-
-## Qui sommes-nous ?
+Bonjour je suis l'index et [pourquoi](pourquoi.md) ?

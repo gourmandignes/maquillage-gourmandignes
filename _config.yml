@@ -20,6 +20,14 @@ defaults:
       layout: location
 
 collections:
+  producteurs:
+    output: true
+  coordinateurs:
+    output: true
+  contrats:
+    output: true
+  produits:
+    output: true
 
 plugins:
   - jekyll-remote-theme

@@ -4,6 +4,13 @@
     <body>
         {%- include header.html -%}
         <main class="container">
+            <ul class="location">
+                {%- for contenu in site.collections -%} {%- unless contenu.label == 'posts' %}
+                <li>
+                    <a href="/{{ contenu.label }}">{{ contenu.label | capitalize }}</a>
+                </li>
+                {%- endunless %} {%- endfor %}
+            </ul>
             {{ content }}
         </main>
     </body>
